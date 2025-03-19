@@ -1,0 +1,348 @@
+/* Global Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.animatedLogo {
+    width: 120px;
+    height: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.animatedHeading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Reviews List */
+.reviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Review Card */
+.reviewCard {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.2s ease-in-out;
+    height: 200px; /* Fixed height for uniformity */
+    border: 1px solid purple;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom:10px;
+    border-radius:10px;
+}
+
+.reviewCard:hover {
+    transform: scale(1.02);
+}
+
+/* Image Styling */
+.reviewImage {
+    width: 140px; /* Ensuring all images are the same size */
+    height: 140px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid purple;
+    
+}
+
+/* Text Section */
+.textSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 140px; /* Ensures consistency */
+}
+
+.textSection h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.textSection p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Rating & Yes/No Section */
+.ratingSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    min-height: 140px; /* Consistent height */
+}
+
+/* Stars */
+.stars {
+    display: flex;
+    gap: 5px;
+}
+
+.star {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+    color: #ccc;
+}
+
+.star:hover,
+.star.checked {
+    color: gold;
+    transform: scale(1.2);
+}
+
+/* Yes/No Buttons */
+.yesno {
+    display: flex;
+    gap: 15px;
+}
+
+/* Feedback Section */
+.feedbackSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    width:80%;
+    border:1px solid purple;
+    margin-left:11px;
+}
+
+.feedbackContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom:5px ;
+    border: 1px solid plum;
+}
+
+.feedbackImage {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    padding-bottom:25%;
+    
+}
+
+.textContainer {
+    width: 100%;
+}
+
+.feedbackTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.feedbackTextarea {
+    width: 80%;
+    height: 120px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+}
+
+
+.submitButton {
+    width: 80%;
+    padding: 10px;
+    margin-top: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reviewCard {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .reviewImage {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ratingSection {
+        align-items: center;
+    }
+
+    .stars {
+        justify-content: center;
+    }
+
+    .feedbackContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feedbackImage {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Feedback Section */
+.feedbackSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    width:75%;
+    margin-top:10px;
+    max-width: 800px; /* Ensures uniform width */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+/* Feedback Image */
+.feedbackImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Feedback Container */
+.feedbackContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Feedback Title */
+.feedbackTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Textarea */
+.feedbackTextarea {
+    width: 100%;
+    max-width: 500px;
+    height: 120px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+}
+
+/* Submit Button */
+.submitReview {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #9F4BDC;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submitReview:hover {
+    background-color:skyblue;
+    margin-top:10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .feedbackSection {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .feedbackImage {
+        width: 100px;
+        height: 100px;
+    }
+
+    .feedbackTextarea {
+        height:80px;
+        width:100px;
+
+    }
+}

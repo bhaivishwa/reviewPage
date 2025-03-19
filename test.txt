@@ -1,0 +1,389 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f8f9fa, #e3e6ea);
+            color: #333;
+        }
+        
+        .container {
+            text-align: center;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 1000px;
+        }
+        
+        .header img {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #212529;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        
+        .review-section {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            gap: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .review-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            background: #f1f3f5;
+        }
+        
+        .review-section img {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            border: 3px solid #007bff;
+        }
+        
+        .text-content {
+            flex: 1;
+        }
+        
+        h3 {
+            color: #007bff;
+            font-size: 20px;
+        }
+        
+        p {
+            color: #555;
+            font-size: 16px;
+        }
+        
+        .stars {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        
+        .star {
+            font-size: 26px;
+            cursor: pointer;
+            color: #ddd;
+            transition: color 0.3s;
+        }
+        
+        .star:hover,
+        .star.checked {
+            color: #FFD700;
+            transform: scale(1.1);
+        }
+        
+        .yesno {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        
+        .yesno label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        .yesno input[type="radio"] {
+            accent-color:purple;
+        }
+        
+        .review-text {
+            margin-top: 15px;
+        }
+        
+        .review-text label {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        textarea {
+            width: 90%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid purple;
+            font-size: 14px;
+            margin-top: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        textarea:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .review-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .stars, .yesno {
+                justify-content: center;
+            }
+        }</style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header">
+                <img src="shiphit.jpeg" alt="Logo" class="animated-logo">
+            </div>         
+            <style>
+                /* Logo Animation */
+                .animated-logo {
+                    width: 150px; /* Adjust size */
+                    height: auto;
+                    animation: fadeInBounce 2s ease-in-out;
+                    transition: transform 0.5s ease-in-out;
+                }
+            
+                /* Bounce and Fade-in Animation */
+                @keyframes fadeInBounce {
+                    0% { opacity: 0; transform: scale(0.5) translateY(-50px); }
+                    50% { opacity: 0.5; transform: scale(1.1) translateY(10px); }
+                    100% { opacity: 1; transform: scale(1) translateY(0); }
+                }
+            
+                /* Rotate on Hover */
+                .animated-logo:hover {
+                    transform: rotate(10deg) scale(1.1);
+                }
+            
+                /* Animated Heading */
+                .animated-heading {
+                    font-size: 28px;
+                    font-weight: bold;
+                    -webkit-background-clip: text;
+                    background-color: #9F4BDC;
+                    color: transparent;
+                    animation: glow 2s infinite alternate, fadeIn 1.5s ease-in-out;
+                }
+            
+            
+            </style>
+            
+            <h2 class="animated-heading">Review Contents for Our Clients</h2>
+        </div>
+        
+        <style>
+         
+        </style>
+        
+        
+        <div class="review-section" style="background-color:whitesmoke">
+            <img src="th (1).jpeg" alt="Packing">
+            <div class="text-content">
+                <h3 style="color:purple;">Packings:</h3>
+                <p>Proper packing prevents damage during transit. Premium materials enhance customer satisfaction.</p>
+                <div class="stars" data-category="packing">
+                    <span class="star" onclick="rate(this, 'packing', 1)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 2)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 3)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 4)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 5)">&#9733;</span>
+                </div>
+                <div class="yesno">
+                    <label><input type="radio" name="packing-yesno"> Yes</label>
+                    <label><input type="radio" name="packing-yesno"> No</label>
+                </div>
+            </div>  
+        </div>
+
+        <div class="review-section" style="background-color:whitesmoke">
+            <img src="knowledge.jpg" alt="Packing">
+            <div class="text-content">
+                <h3 style="color:purple;">Knowledge:</h3>
+                <p>Wear your knowledge and stay on time—every thread tells a story of wisdom and style.
+                </p>
+                <div class="stars" data-category="packing">
+                    <span class="star" onclick="rate(this, 'packing', 1)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 2)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 3)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 4)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 5)">&#9733;</span>
+                </div>
+                <div class="yesno">
+                    <label><input type="radio" name="packing-yesno"> Yes</label>
+                    <label><input type="radio" name="packing-yesno"> No</label>
+                </div>
+            </div>  
+        </div>
+
+        <div class="review-section" style="background-color:whitesmoke">
+            <img src="products.webp" alt="Packing">
+            <div class="text-content">
+                <h3 style="color:purple;">products:</h3>
+                <p>Smart tees for smarter you—express ideas, inspire minds, and make an impact effortlessly.
+                </p>
+                <div class="stars" data-category="packing">
+                    <span class="star" onclick="rate(this, 'packing', 1)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 2)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 3)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 4)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 5)">&#9733;</span>
+                </div>
+                <div class="yesno">
+                    <label><input type="radio" name="packing-yesno"> Yes</label>
+                    <label><input type="radio" name="packing-yesno"> No</label>
+                </div>
+            </div>  
+        </div>
+
+        <div class="review-section" style="background-color:whitesmoke">
+            <img src="tshirts.webp" alt="Packing">
+            <div class="text-content">
+                <h3 style="color:purple;">T-shirts:</h3>
+                <p>Ideas on fabric, wisdom on display—let your T-shirt speak louder than words.
+                </p>
+                <div class="stars" data-category="packing">
+                    <span class="star" onclick="rate(this, 'packing', 1)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 2)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 3)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 4)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 5)">&#9733;</span>
+                </div>
+                <div class="yesno">
+                    <label><input type="radio" name="packing-yesno"> Yes</label>
+                    <label><input type="radio" name="packing-yesno"> No</label>
+                </div>
+            </div>  
+        </div>
+
+        <div class="review-section" style="background-color:whitesmoke">
+            <img src="ontime.webp" alt="Packing">
+            <div class="text-content">
+                <h3 style="color:purple;">On-Time:</h3>
+                <p>Ontime learning, anytime wearing—fuel your curiosity with style that's always on point.
+                </p>
+                <div class="stars" data-category="packing">
+                    <span class="star" onclick="rate(this, 'packing', 1)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 2)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 3)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 4)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 5)">&#9733;</span>
+                </div>
+                <div class="yesno">
+                    <label><input type="radio" name="packing-yesno"> Yes</label>
+                    <label><input type="radio" name="packing-yesno"> No</label>
+                </div>
+            </div>  
+        </div>
+
+        
+        <div class="review-section" style="background-color:whitesmoke">
+            <img style="margin-bottom:23%;" src="feedback.webp" alt="Packing">
+            <div class="text-content">
+                <h3 style="color:purple;">Share Your Comments:</h3>
+                <p>Proper packing prevents damage during transit. Premium materials enhance customer satisfaction.</p>
+                
+                <div class="stars" data-category="packing">
+                    <span class="star" onclick="rate(this, 'packing', 1)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 2)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 3)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 4)">&#9733;</span>
+                    <span class="star" onclick="rate(this, 'packing', 5)">&#9733;</span>
+                </div>
+        
+                <div class="yesno">
+                    <label><input type="radio" name="packing-yesno" value="Yes"> Yes</label>
+                    <label><input type="radio" name="packing-yesno" value="No"> No</label>
+                </div>
+        
+                <div class="review-text">
+                    <label style="font-size: large; font-weight:600;" for="userReview">Your Comments:</label>
+                    <textarea style="height:100px;" id="userReview" placeholder="Write your feedback here..." rows="4"></textarea>
+                </div>
+        
+                <button class="submit-review" onclick="submitReview()">Submit Review</button>
+            </div>  
+        </div>
+        
+        <style>
+            .submit-review {
+                background-color:#9F4BDC;
+                color: white;
+                font-size: 16px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 8px;
+                margin-top: 15px;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+            }
+        
+            .submit-review:hover {
+                background-color:skyblue;
+                transform: scale(1.05);
+            }
+        </style>
+        
+        <script>
+            let selectedRating = 0;
+        
+            function rate(star, category, rating) {
+                let stars = star.parentNode.querySelectorAll('.star');
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.classList.add('checked');
+                    } else {
+                        s.classList.remove('checked');
+                    }
+                });
+                selectedRating = rating; // Save selected rating
+                console.log(`Rated ${category} with ${rating} stars`);
+            }
+        
+            function submitReview() {
+                let reviewText = document.getElementById('userReview').value;
+                let yesNoSelection = document.querySelector('input[name="packing-yesno"]:checked');
+        
+                if (selectedRating === 0) {
+                    alert("Please select a star rating.");
+                    return;
+                }
+        
+                if (!yesNoSelection) {
+                    alert("Please select Yes or No.");
+                    return;
+                }
+        
+                if (reviewText.trim() === "") {
+                    alert("Please enter your review before submitting.");
+                    return;
+                }
+        
+                alert("Thank you for your feedback!");
+                document.getElementById('userReview').value = ""; // Clear the textarea after submission
+                document.querySelectorAll('.star').forEach(s => s.classList.remove('checked'));
+                selectedRating = 0; // Reset rating
+            }
+        </script>
+        
+</body>
+</html>
